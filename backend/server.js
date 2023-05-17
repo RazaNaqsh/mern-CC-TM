@@ -3,10 +3,10 @@ import dotenv from "dotenv";
 dotenv.config();
 import userRoutes from "./routes/userRoutes.js";
 import { notFound, errorHandler } from "./middleware/errorMiddleware.js";
+import connectDB from "./config/db.js";
 
-// const port = process.env.PORT || 4000;
-const port = 4000;
-
+const port = process.env.PORT || 4000;
+connectDB();
 const app = express();
 
 app.use("/api/users", userRoutes);
