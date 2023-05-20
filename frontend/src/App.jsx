@@ -1,12 +1,16 @@
+import { Container } from "react-bootstrap";
 import Header from "./components/Header";
+import HomeScreen from "./screens/HomeScreen";
 
-function App() {
+const App = () => {
 	return (
 		<>
 			<Header />
-			<h1>MERN Auth</h1>
+			<Container className="my-2">
+				<HomeScreen />
+			</Container>
 		</>
 	);
-}
+};
 
 export default App;
